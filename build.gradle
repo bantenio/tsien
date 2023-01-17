@@ -1,0 +1,21 @@
+subprojects {
+    apply plugin: "java-library"
+
+    repositories {
+        mavenCentral(url: "$aliyunMavenPublicUrl")
+    }
+
+    dependencies {
+        api 'org.slf4j:jul-to-slf4j:2.0.6'
+        api 'cn.hutool:hutool-core:5.8.11'
+    }
+
+    ext {
+        isSnapshot = project.hasProperty("snapshot")
+        version = "${version}" + (isSnapshot ? "-SNAPSHOT" : "")
+    }
+
+    task publishMavenPublicationToZzMavenSnapshotRepository(group: 'publishing') {
+        finalizedBy('publishMavenPublicationToZzMavenRepository')
+    }
+}
