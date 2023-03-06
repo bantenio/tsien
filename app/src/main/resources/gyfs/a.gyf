@@ -1,0 +1,6 @@
+import groovy.transform.BaseScript
+import org.tenio.tsien.parser.groovy.dsl.ChainManagerConfigScript
+
+@BaseScript ChainManagerConfigScript _
+
+chain("")

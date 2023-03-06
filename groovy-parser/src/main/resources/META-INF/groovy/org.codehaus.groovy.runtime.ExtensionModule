@@ -1,0 +1,3 @@
+moduleName=Groovy Parser module for parser
+moduleVersion=1.0-test
+extensionClasses=org.tenio.tsien.parser.groovy.ScriptExtension
