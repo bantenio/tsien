@@ -1,7 +1,5 @@
 package org.tenio.tsien.core;
 
-import org.tenio.tsien.core.extension.ExtensionExecutionContext;
-
 import java.util.List;
 import java.util.Map;
 import java.util.function.Function;
@@ -38,5 +36,5 @@ public interface ExecutionContext {
 
     List<Interceptor> getInterceptors();
 
-    ExtensionExecutionContext register(Interceptor interceptor);
+    ExecutionContext register(Interceptor interceptor);
 }
