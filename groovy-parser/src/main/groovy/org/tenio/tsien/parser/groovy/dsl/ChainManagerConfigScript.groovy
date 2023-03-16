@@ -8,7 +8,11 @@ abstract class ChainManagerConfigScript extends Script {
 
     private DefaultChainManager chainManager = new DefaultChainManager()
 
-    private GyfParser parser = new GyfParser()
+    private GyfParser parser
+
+    void setParser(GyfParser gyfParser) {
+        this.parser = gyfParser
+    }
 
     void chain(String chainPath) {
         chainManager.addChain(parser.parse(chainPath))
